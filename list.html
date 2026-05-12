@@ -1,0 +1,19 @@
+<h2>Tu sach</h2>
+<a href="{% url 'book_create' %}">Them sach</a>
+<table border="2">
+    <tr>
+        <th>Ten sach</th>
+        <th>Tac gia</th>
+        <th>Nam xuat ban</th>
+        <th></th>
+    </tr>
+    {% for b in books %}
+    <tr>
+        
+        <td>{{b.title}}</td>
+        <td>{{b.author}}</td>
+        <td>{{b.published_date}}</td>
+        <td>{{b.isbn}}</td>
+    </tr>
+    {%endfor%}
+</table>
